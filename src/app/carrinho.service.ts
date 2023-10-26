@@ -11,8 +11,8 @@ export class CarrinhoService {
   constructor() { }
 
   recuperarCarrinho(){
-    const carrinho = JSON.parse(localStorage.getItem("carrinho") || "");
-    return carrinho;
+   this.itens = JSON.parse(localStorage.getItem("carrinho") || "");
+    return this.itens;
   }
 
   adicionarAoCarrinho(produto: IProdutoCarrinho){
