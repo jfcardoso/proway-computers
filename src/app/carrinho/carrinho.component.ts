@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CarrinhoService } from '../carrinho.service';
 import { IProdutoCarrinho } from '../produtos';
 import { NotificacoesService } from '../notificacoes.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrinho',
@@ -31,7 +31,7 @@ export class CarrinhoComponent implements OnInit{
 
   finalizarCompra(){
     this.notificaoService.notificar("Parabéns! Compra realizada com Sucesso.");  
-    this.carrinhoService.limparCarrinho();     
+    this.carrinhoService.limparCarrinho();       
     this.router.navigate(["produtos"]);
   }
 

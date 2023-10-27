@@ -26,7 +26,16 @@ export class CarrinhoService {
   }
 
   limparCarrinho(){
+    console.log('entrei em limparCarrinho')
+    console.log('local Storage antes do comando clear')
+    console.log(localStorage)
+    console.log('itens antes do comando para limpar o vetor')
+    console.log(this.itens)
     this.itens = [];
+    console.log('itens depois do comando para limpar o vetor')
+    console.log(this.itens)
     localStorage.clear;
+    console.log('local Storage depois do comando clear')
+    console.log(localStorage)
   }
 }
