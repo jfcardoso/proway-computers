@@ -2,7 +2,7 @@
 <div *ngIf="itensDoCarrinho.length > 0; else carrinhoVazio">
     <ul>
         <li *ngFor="let itemCarrinho of itensDoCarrinho">
-            <img [src]="itemCarrinho.imagem" alt="">
+            <img [src]="itemCarrinho.imagem">
             <p>{{itemCarrinho.descricao}}</p>
             <p>Preço: {{itemCarrinho.preco | currency: "BRL"}}</p>
             <label>
